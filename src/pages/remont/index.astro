@@ -1,0 +1,59 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+
+const description = 'Мультибрендовый официальный сервис в Самаре и Поволжье по ремонту американских, европейских и корейских автомобилей концерна General Motors. Выгодные цены, оригинальные запчасти, диагностика и ТО.';
+const title = 'Ремонт авто General Motors в Самаре - цены';
+const h1 = 'Сервисный центр';
+
+export const breadcrumb = { name: "Сервисный центр", href: "/remont/" };
+---
+
+<PageLayout
+  h1={h1}
+  title={title}
+  description={description}
+  breadcrumb={[breadcrumb]}
+>
+<div class="flat-imgbox isotope-project clearfix style5" >
+  <div class="imgbox style5 one-of-two">  
+    <div class="imgbox-img">
+      <img src="/upload/content/logo-photo-opel.jpg" alt="Opel"> 
+      <div class="overlay"></div>
+    </div>
+    <div class="imgbox-content  one-of-two">
+      <h4 class="heading"><a href="/remont/opel/" class="hover-text">Ремонт Opel</a></h4>            
+      <a href="/remont/opel/" class="view-details"></a>
+    </div>
+  </div> <!-- /.imgbox -->
+  <div class="imgbox style5  one-of-two">  
+    <div class="imgbox-img">
+      <img src="/upload/content/logo-photo-chevrolet.jpg" alt="Chevrolet"> 
+      <div class="overlay"></div>
+    </div>
+    <div class="imgbox-content  one-of-two">
+      <h4 class="heading"><a href="/remont/chevrolet" class="hover-text">Ремонт Chevrolet</a></h4>
+      <a href="/remont/chevrolet" class="view-details"></a>
+    </div>
+  </div> <!-- /.imgbox -->
+  <div class="imgbox style5 one-of-two">  
+    <div class="imgbox-img">
+      <img src="/upload/content/logo-photo-cadillac.jpg" alt="Cadillac"> 
+      <div class="overlay"></div>
+    </div>
+    <div class="imgbox-content  one-of-two">
+      <h4 class="heading"><a href="/remont/cadillac/" class="hover-text">Ремонт Cadillac</a></h4>            
+      <a href="/remont/cadillac/" class="view-details"></a>
+    </div>
+  </div> <!-- /.imgbox -->
+  <div class="imgbox style5 one-of-two">  
+    <div class="imgbox-img">
+      <img src="/upload/content/logo-photo-hummer.jpg" alt="Hummer"> 
+      <div class="overlay"></div>
+    </div>
+    <div class="imgbox-content  one-of-two">
+      <h4 class="heading"><a href="/remont/hummer/" class="hover-text">Ремонт Hummer</a></h4>           
+      <a href="/remont/hummer/" class="view-details"></a>
+    </div>
+  </div> <!-- /.imgbox -->
+</div>
+</PageLayout>
