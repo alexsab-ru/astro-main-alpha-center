@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
+import { breadcrumb } from './index.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('services');
@@ -22,6 +23,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<PageLayout {...post.data}>
+<PageLayout {...post.data} breadcrumb={[breadcrumb, {name: post.data.breadcrumb, href: Astro.url.pathname}]}>
 	<Content />
 </PageLayout>
