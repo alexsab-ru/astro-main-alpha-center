@@ -1,11 +1,13 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
+
 const description = 'Альфа Центр - выкуп и продажа авто с пробегом. Подержанные автомобили с гарантией! Уникальные акции и выгодные цены!';
 const title = 'Купить авто с пробегом в Самаре - цены на б у автомобили в Trade-In';
 const h1 = 'Услуги';
 ---
 
-<Layout>
+<PageLayout title={title} description={description}>
+  
   <div class="intro">
     <div class="intro">
        Автоцентр АЛЬФА - ваш надежный партнер на рынке автомобилей с пробегом!<br>
@@ -33,4 +35,4 @@ const h1 = 'Услуги';
     <p>
     </p>
   </div>
-</Layout>
+</PageLayout>

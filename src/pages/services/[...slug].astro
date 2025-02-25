@@ -1,0 +1,27 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('services');
+
+	// Проверяем, что массив posts не пустой перед обработкой
+	if (posts && posts.length > 0) {
+		return posts.map((post) => ({
+			params: { slug: post.slug },
+			props: post,
+		}));
+	} else {
+		// Если массив пустой, возвращаем пустой массив
+		return [];
+	}
+}
+type Props = CollectionEntry<'services'>;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<PageLayout {...post.data}>
+	<Content />
+</PageLayout>
