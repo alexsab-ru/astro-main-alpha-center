@@ -1,0 +1,13 @@
+---
+description: 'Вакансии — Сервисный центр Альфа'
+title: 'Вакансии'
+breadcrumb: 'Вакансии'
+h1: 'Вакансии'
+---
+
+import { PHONE } from '@/const';
+import { phoneFormat } from '@/js/utils/numbers.format';
+
+<div>
+	Если вы не нашли интересующей вакансии, но хотите чтобы ваше резюме попало в нашу базу и мы имели вас в виду позвоните по номеру <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>.
+</div>
