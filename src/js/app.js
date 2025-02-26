@@ -4,10 +4,15 @@ import './modules/modals';
 import './modules/latest.posts';
 import './modules/stock-slider';
 
+import ResponsiveMenu from './modules/ResponsiveMenu';
 import { connectForms, cookiecook } from '@alexsab-ru/scripts';
 cookiecook();
-connectForms('https://alexsab.ru/lead/test/', {
+connectForms('https://alexsab.ru/lead/dev/', {
 	confirmModalText: 'Вы уже оставляли заявку сегодня, с Вами обязательно свяжутся в ближайшее время!',
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	new ResponsiveMenu('#site_nav ul');
 });
 
 import GLightbox from 'glightbox';
@@ -50,7 +55,7 @@ if(lazys.length){
 
 function executeRecaptcha() {
 grecaptcha.ready(function() {
-	grecaptcha.execute('6Lepfy4pAAAAAAGHFP655qNe6Bb_BcskklcxajC6', {action: 'open'}).then(function(token) {
+	grecaptcha.execute('6Lepfy4pAAAAAAGHFP655qNe6Bb_BcskklcxajC6', {action: 'alpha_center'}).then(function(token) {
 		let formData = new FormData();
 		formData.append('g-recaptcha-response', token);
 		const params = new URLSearchParams([...formData]);
