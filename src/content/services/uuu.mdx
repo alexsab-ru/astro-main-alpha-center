@@ -18,15 +18,14 @@ import { phoneFormat } from '@/js/utils/numbers.format';
    <li>Вам не нужно стоять в очередях и самостоятельно заниматься урегулированием спорных ситуаций</li>
    <li>После ДТП Вы сразу приезжаете в Автоцентр «Альфа» и мы решаем большинство проблем, связанных с получением направления на ремонт</li>
 </ul>
-<p style="overflow: hidden; text-align: center;">
-   {/* <img alt="" title="Ингосстрах" src="/upload/actions/i_ingos.jpg"> */}
-   <img src="/upload/actions/i_reso.jpg" title="РЕСО" />
-   <img src="/upload/actions/i_uralsib.jpg" title="Уралсиб" /> <br />
-   <img src="/upload/actions/i_fyord.jpg" title="Фьорд" />
-   <img src="/upload/actions/i_vsk.jpg" title="ВСК страховой дом" /> <br />
-   <img src="/upload/actions/i_ergo.jpg" title="ERGO Русь" />
-   <img src="/upload/actions/i_rosgostrah.jpg" title="РОСГОССТРАХ" />
-</p>
+<div class="flex flex-wrap my-8">
+   <img src="/img/services/uuu/i_reso.webp" title="РЕСО" />
+   <img src="/img/services/uuu/i_uralsib.webp" title="Уралсиб" /> <br />
+   <img src="/img/services/uuu/i_fyord.webp" title="Фьорд" />
+   <img src="/img/services/uuu/i_vsk.webp" title="ВСК страховой дом" /> <br />
+   <img src="/img/services/uuu/i_ergo.webp" title="ERGO Русь" />
+   <img src="/img/services/uuu/i_rosgostrah.webp" title="РОСГОССТРАХ" />
+</div>
 <p>
    Внимание! В настоящее время услуга распространяется только для клиентов, застраховавших свою машину по программе КАСКО ( при страховании Каско в страховых компаниях ОСАО «РЕСО-Гарантия, СД «ВСК», СК «ФьорД», СК «УралСиб», СК «ERGO Русь», СК «РОСГОССТРАХ»)
 </p>
@@ -40,7 +39,7 @@ import { phoneFormat } from '@/js/utils/numbers.format';
    <strong>Для заявления по убыткам КАСКО и выявления всех повреждений автомобиль предоставлять в чистом виде.</strong>
 </p>
 <p>
-   <strong>Телефон Специалиста по УУУ&nbsp;<a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>;</strong>
+   <strong>Телефон Специалиста по УУУ <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>;</strong>
 </p>
 <p>
    <strong>Время приема документов ежедневно с 8-00 до 20-00</strong>
