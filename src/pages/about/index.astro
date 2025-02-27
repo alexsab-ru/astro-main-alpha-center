@@ -1,0 +1,27 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+
+const description = 'О компании — Сервисный центр Альфа';
+const title = 'О компании';
+const h1 = 'О компании';
+
+export const breadcrumb = { name: "О компании", href: "/about/" };
+---
+
+<PageLayout
+  h1={h1}
+  title={title}
+  description={description}
+  breadcrumb={[breadcrumb]}
+>
+<p> Сервисный центр &laquo;АЛЬФА " является единственным в&nbsp;Самаре официально авторизованным центром по&nbsp;обслуживанию пяти марок General Motors: Cadillac, Opel, Chevrolet, Hummer и&nbsp;Saab. Автоцентр &laquo;Альфа&raquo;&nbsp;&mdash; один из&nbsp;самых крупных и&nbsp;технологически оснащенных сервис -центров среди официальных дилеров General Motors в&nbsp;Поволжье. Компания имеет полностью оснащенный технический сервис.
+</p>
+<p> <a href="/autoservice/individuals/mechanical_repairs/"> Механический цех </a> размещает на&nbsp;площади более 1400 кв.м. 25 постов, <a href="/autoservice/individuals/body_repair/"> кузовной цех </a> на&nbsp;площади более 1050 кв.м&nbsp;&mdash; 16 постов, автомойка, площадью 400 кв.м, способна единовременно принять 8 автомобилей.
+</p>
+<p> Для комфортного ожидания своего транспортного средства для клиентов в&nbsp;&laquo;Альфе&raquo; оборудована комфортная зона ожидания.
+</p>
+<p> Автомобильный центр &laquo;АЛЬФА&raquo;&nbsp;&mdash; это надежная компания, которая заботится о&nbsp;своих клиентах, поднимает их&nbsp;престиж, экономит их&nbsp;время и&nbsp;деньги, осуществляет мечты. До&nbsp;2011 года компания &laquo;АЛЬФА&raquo; имела брендовое название <nobr>&laquo;VIP-АВТО</nobr> ЦЕНТР&raquo;. В&nbsp;2011 году компания вернулась к&nbsp;своему изначальному имени (<nobr>ООО &laquo;Альфа-Сервис&raquo;</nobr>)&nbsp;&mdash; &laquo;АЛЬФА&raquo;, что является отражением политики менеджмента, нацеленной на&nbsp;новый этап развития компании.
+</p>
+<p>	Мы&nbsp;искренне желаем видеть вас в&nbsp;числе наших клиентов и&nbsp;надеемся на&nbsp;плодотворное и&nbsp;взаимовыгодное сотрудничество.
+</p>
+</PageLayout>
