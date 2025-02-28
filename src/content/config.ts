@@ -7,7 +7,6 @@ const autoserviceCollection = defineCollection({});
 const aboutCollection = defineCollection({});
 const corporateClientsCollection = defineCollection({});
 const actionsCollection = defineCollection({});
-const newsCollection = defineCollection({});
 
 export const collections = {
   seo: seoCollection,
@@ -16,6 +15,5 @@ export const collections = {
   autoservice: autoserviceCollection,
   about: aboutCollection,
   corporateClients: corporateClientsCollection,
-  actions: actionsCollection,
-  news: newsCollection
+  actions: actionsCollection
 };
