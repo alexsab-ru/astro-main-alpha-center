@@ -23,6 +23,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<PageLayout {...post.data} breadcrumb={[breadcrumb, post.data.type === 'news' ? {name: 'Новости', href: '/about/news/'} : '', {name: post.data.breadcrumb, href: Astro.url.pathname}]}>
+<PageLayout {...post.data} breadcrumb={[breadcrumb, post.data.type === 'news' ? {name: 'Новости', href: '/about/news/'} : {name: 'Блог', href: '/about/blog/'}, {name: post.data.breadcrumb, href: Astro.url.pathname}]}>
 	<Content />
 </PageLayout>
