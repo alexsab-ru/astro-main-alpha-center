@@ -43,6 +43,22 @@ export const LINKS_MENU = [
 		name: 'Сервисный центр',
 		children: [
 			{
+				url: 'remont/hyundai/',
+				name: 'Ремонт Hyundai'
+			},
+			{
+				url: 'remont/kia/',
+				name: 'Ремонт Kia'
+			},
+			{
+				url: 'remont/nissan/',
+				name: 'Ремонт Nissan'
+			},
+			{
+				url: 'remont/niva/',
+				name: 'Ремонт Niva'
+			},
+			{
 				url: 'remont/opel/',
 				name: 'Ремонт Opel'
 			},
