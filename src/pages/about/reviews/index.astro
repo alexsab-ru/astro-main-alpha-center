@@ -1,0 +1,26 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import { SITE_NAME } from '@/const';
+import ReviewItem from '@/components/Reviews/Item.astro';
+import reviewsData from '@/data/reviews.json';
+
+import { breadcrumb as aboutBreadcrumb } from '../index.astro';
+
+let posts = reviewsData;
+---
+
+<PageLayout 
+	h1="Отзывы"
+	title={`Отзывы | ${SITE_NAME}`}
+	breadcrumb={[aboutBreadcrumb, { name: "Отзывы", href: "/reviews/" }]}
+>
+	{
+		posts ? (
+			<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
+				{ posts.map(post => ( <ReviewItem item={post} /> )) }
+			</div>
+		) : (
+			<p>Здесь пока нет отзывов.</p>
+		)
+	}
+</PageLayout>
