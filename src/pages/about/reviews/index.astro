@@ -1,7 +1,7 @@
 ---
 import PageLayout from '@/layouts/PageLayout.astro';
 import { SITE_NAME } from '@/const';
-import ReviewItem from '@/components/Reviews/Item.astro';
+import Review from '@/components/Review/Review.astro';
 import reviewsData from '@/data/reviews.json';
 
 import { breadcrumb as aboutBreadcrumb } from '../index.astro';
@@ -16,9 +16,7 @@ let posts = reviewsData;
 >
 	{
 		posts ? (
-			<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
-				{ posts.map(post => ( <ReviewItem item={post} /> )) }
-			</div>
+		 posts.map(post => ( <Review item={post} /> )) 
 		) : (
 			<p>Здесь пока нет отзывов.</p>
 		)
