@@ -38,12 +38,137 @@ export const LINKS_MENU = [
 	// 	children: models.map(model => ( { url: `models/${model.id}/`, name: `${model?.mark_id} ${model.name.toUpperCase()}` } ) )
 	// },
 	// {url: 'trade-in/', name: 'Оценка автомобиля'},
-	{url: 'special-offers/', name: 'Спецпредложения'},
-	{url: 'news/', name: 'Новости'},
-	// {url: 'test-drive/', name: 'Запись на тест-драйв'},
-	{url: 'service-request/', name: 'Запись на сервис'},
-	{url: '#services', name: 'Услуги'},
-	{url: 'contacts/', name: 'Контакты'},
+	{
+		url: 'remont/',
+		name: 'Сервисный центр',
+		children: [
+			{
+				url: 'remont/opel/',
+				name: 'Ремонт Opel'
+			},
+			{
+				url: 'remont/chevrolet/',
+				name: 'Ремонт Chevrolet'
+			},
+			{
+				url: 'remont/cadillac/',
+				name: 'Ремонт Cadillac'
+			},
+			{
+				url: 'remont/hummer/',
+				name: 'Ремонт Hummer'
+			},
+			{
+				url: 'remont/to/',
+				name: 'Техническое обслуживание'
+			}
+		]
+	},
+	{
+		url: 'services/',
+		name: 'Услуги',
+		children: [
+			{
+				url: 'services/trade-in/',
+				name: 'TRADE-IN'
+			},
+			{
+				url: 'services/auto_loans/',
+				name: 'Автокредитование'
+			},
+			{
+				url: 'services/insurance/',
+				name: 'Страхование'
+			},
+			{
+				url: 'services/uuu/',
+				name: 'Удаленное урегулирование убытков'
+			}
+		]
+	},
+	{
+		url: 'autoservice/',
+		name: 'Сервис и запчасти',
+		children: [
+			{
+				url: 'autoservice/individuals/postwarranty_service/',
+				name: 'Постгарантийный сервис'
+			},
+			{
+				url: 'autoservice/individuals/mechanical_repairs/',
+				name: 'Механический ремонт'
+			},
+			{
+				url: 'autoservice/individuals/body_repair/',
+				name: 'Кузовной ремонт'
+			},
+			{
+				url: 'autoservice/spare_parts/',
+				name: 'Запчасти'
+			},
+			{
+				url: 'autoservice/washing/',
+				name: 'Мойка'
+			},
+			{
+				url: 'autoservice/trunks/',
+				name: 'Шиномонтаж'
+			},
+			{
+				url: 'autoservice/acdelco/',
+				name: 'Запасные части ACDelco'
+			}
+		]
+	},
+	{url: 'actions/', name: 'Акции'},
+	{
+		url: 'about/',
+		name: 'О компании',
+		children: [
+			{
+				url: 'about/contacts/',
+				name: 'Контактная информация'
+			},
+			{
+				url: 'about/our_history/',
+				name: 'Наша история'
+			},
+			{
+				url: 'about/benefits/',
+				name: 'Преимущества'
+			},
+			{
+				url: 'about/vacancies/',
+				name: 'Вакансии'
+			},
+			{
+				url: 'about/news/',
+				name: 'Новости'
+			},
+			{
+				url: 'about/blog/',
+				name: 'Блог'
+			},
+		]
+	},
+	{
+		url: 'corporate_clients/',
+		name: 'Корпоративным клиентам',
+		children: [
+			{
+				url: 'corporate_clients/services_for_legal_entities/',
+				name: 'Сервис для юридических лиц'
+			},
+			{
+				url: 'corporate_clients/our_partners/',
+				name: 'Наши партнеры'
+			},
+			{
+				url: 'corporate_clients/certificates/',
+				name: 'Сертификаты и свидетельства'
+			},
+		]
+	},
 ];
 // Текстовая строка над хедером
 export const HEADER_TOP_LINE = '';
