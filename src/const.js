@@ -190,6 +190,12 @@ export const LINKS_MENU = [
 export const COLLECTIONS = [
 	{name: 'special-offers', title: 'Спецпредложения'},
 	{name: 'news', title: 'Новости'},
+	{name: 'services', title: 'Услуги'},
+	{name: 'remont', title: 'Сервисный центр'},
+	{name: 'autoservice', title: 'Сервис и запчасти'},
+	{name: 'about', title: 'О компании'},
+	{name: 'corporateClients', title: 'Корпоративным клиентам'},
+	{name: 'actions', title: 'Акции'}
 ];
 // Текстовая строка над хедером
 export const HEADER_TOP_LINE = '';
