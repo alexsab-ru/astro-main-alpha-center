@@ -1,5 +1,5 @@
 ---
-import {SITE_NAME, BRAND, LEGAL_CITY_WHERE, TIMER_ENDTIME, MARQUEE} from '@/const.js';
+import {SITE_NAME, BRAND, LEGAL_CITY_WHERE, TIMER_ENDTIME, MARQUEE, REVIEWS_LIMIT} from '@/const.js';
 import Layout from '@/layouts/Layout.astro';
 import Banner from '@/components/Banner/Banner.astro';
 import SpecialServices from '@/components/SpecialServices/Index.astro';
@@ -24,7 +24,9 @@ const modelsWithComplectations = models.filter(m => (m?.complectations !== undef
 import specialServicesData from '@/data/special-services.json'
 import faqData from '@/data/faq.json'
 import servicesData from '@/data/services.json'
-import reviewsData from '@/data/reviews.json'
+import allReviewsData from '@/data/reviews.json'
+
+const reviewsData = allReviewsData.slice(0, REVIEWS_LIMIT);
 
 const salonsPhone = salons.map((salon: any) => salon.phone).filter(phone => phone).join(', ');
 import SeoText from '@/components/Seo/Index.astro';
