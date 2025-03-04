@@ -1,19 +1,16 @@
 import { defineCollection } from 'astro:content';
+import { collectionSchema } from './collectionSchema';
+import { COLLECTIONS } from '@/const';
+
+// Создаем коллекции
+const objectCollections = COLLECTIONS.reduce((acc, collection) => {
+	acc[collection.name] = defineCollection(collectionSchema); // Используем collection.name как ключ
+	return acc; // Возвращаем измененный аккумулятор
+}, {});
 
 const seoCollection = defineCollection({});
-const servicesCollection = defineCollection({});
-const remontCollection = defineCollection({});
-const autoserviceCollection = defineCollection({});
-const aboutCollection = defineCollection({});
-const corporateClientsCollection = defineCollection({});
-const actionsCollection = defineCollection({});
 
 export const collections = {
-  seo: seoCollection,
-  services: servicesCollection,
-  remont: remontCollection,
-  autoservice: autoserviceCollection,
-  about: aboutCollection,
-  corporateClients: corporateClientsCollection,
-  actions: actionsCollection
+	...objectCollections,
+	seo: seoCollection,
 };
