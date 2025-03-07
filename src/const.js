@@ -56,7 +56,7 @@ export const LINKS_MENU = [
 			},
 			{
 				url: 'remont/niva/',
-				name: 'Ремонт Niva'
+				name: 'Ремонт Niva Chevrolet'
 			},
 			{
 				url: 'remont/opel/',
