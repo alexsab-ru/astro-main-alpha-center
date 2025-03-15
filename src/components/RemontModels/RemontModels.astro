@@ -1,50 +1,23 @@
+---
+import BrandLink from './BrandLink.astro';
+
+const brands = [
+  { brand: 'Jetour', url: '/remont/jetour/', image: '/img/remont/logo-photo-jetour.webp' },
+  { brand: 'Soueast', url: '/remont/soueast/', image: '/img/remont/logo-photo-soueast.webp' },
+  { brand: 'Livan', url: '/remont/livan/', image: '/img/remont/logo-photo-livan.webp' },
+  { brand: 'Baic', url: '/remont/baic/', image: '/img/remont/logo-photo-baic.webp' },
+  { brand: 'Kaiyi', url: '/remont/kaiyi/', image: '/img/remont/logo-photo-kaiyi.webp' },
+  { brand: 'Hyundai', url: '/remont/hyundai/', image: '/img/remont/logo-photo-hyundai.webp' },
+  { brand: 'Kia', url: '/remont/kia/', image: '/img/remont/logo-photo-kia.webp' },
+  { brand: 'Nissan', url: '/remont/nissan/', image: '/img/remont/logo-photo-nissan.webp' },
+  { brand: 'Renault', url: '/remont/renault/', image: '/img/remont/logo-photo-renault.webp' },
+  { brand: 'Chevrolet Niva', url: '/remont/niva/', image: '/img/remont/logo-photo-niva-chevrolet.webp' },
+  { brand: 'Opel', url: '/remont/opel/', image: '/img/remont/logo-photo-opel.webp' },
+  { brand: 'Chevrolet', url: '/remont/chevrolet/', image: '/img/remont/logo-photo-chevrolet.webp' },
+  { brand: 'Cadillac', url: '/remont/cadillac/', image: '/img/remont/logo-photo-cadillac.webp' },
+  { brand: 'Hummer', url: '/remont/hummer/', image: '/img/remont/logo-photo-hummer.webp' },
+];
+---
 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 mt-8">
-  <a href='/remont/opel/' class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-opel.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Opel' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Opel</div>
-  </a>
-  <a href='/remont/chevrolet/' class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-chevrolet.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Chevrolet' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Chevrolet</div>
-  </a>
-  <a href='/remont/cadillac/' class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-cadillac.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Cadillac' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Cadillac</div>
-  </a>
-  <a href='/remont/hummer/' class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-hummer.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Hummer' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Hummer</div>
-  </a>
-  <a href="/remont/hyundai/" class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-hyundai.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Hyundai' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Hyundai</div>
-  </a>
-  <a href="/remont/kia/" class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-kia.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Kia' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Kia</div>
-  </a>
-  <a href="/remont/nissan/" class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-nissan.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Nissan' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Nissan</div>
-  </a>
-  <a href="/remont/niva/" class="!no-underline">
-    <div class="bg-gray-50 group rounded-2xl relative aspect-video overflow-hidden lazy">
-      <img src="/img/loading-simple.gif" data-src='/img/remont/logo-photo-niva-chevrolet.webp' class="absolute w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110" alt='Ремонт Chevrolet Niva' loading="lazy" />
-    </div>
-    <div class="text-black mt-2 sm:mt-4 leading-none">Ремонт Chevrolet Niva</div>
-  </a>
+  {brands.map((brand) => <BrandLink {...brand} />)}
 </div>
