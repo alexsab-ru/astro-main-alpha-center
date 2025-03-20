@@ -10,17 +10,17 @@ module.exports = {
 			...baseConfig.theme.extend,
 			colors: {
 				...baseConfig.theme.extend.colors,
-				'light-gray': '#F9FAFB',
-				'dark-gray': '#E5E5E5',
+				bgcolor: {
+					500: '#E5E5E5',
+				},
+				textlight: {
+					500: '#F9FAFB',
+				},
 				red: {
 					500: '#D90429',
 				},
 				orange: {
-					500: 'F59E0B',
-				},
-				gray: {
-					400: '#F9FAFB',
-					500: '#E5E5E5',
+					500: '#F59E0B',
 				},
 				accent: {
 					400: '#D90429',
