@@ -232,3 +232,61 @@ const phones = PHONE ? [`<a class="whitespace-nowrap" href="tel:${phoneFormat(PH
 
 export const FOOTER_INFO = '<sup>*</sup> Вся представленная на сайте информация, касающаяся автомобилей и сервисного обслуживания, носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 ГК РФ. Все цены, указанные на данном сайте, носят информационный характер. Для получения подробной информации просьба обращаться к менеджерам отдела продаж по номеру телефона '+phones.join(', ')+'. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления.';
 export const REVIEWS_LIMIT = 6;
+export const autoBrands = [
+	{
+		url: 'remont/jetour/',
+		name: 'Jetour'
+	},
+	{
+		url: 'remont/soueast/',
+		name: 'Soueast'
+	},
+	{
+		url: 'remont/livan/',
+		name: 'Livan'
+	},
+	{
+		url: 'remont/baic/',
+		name: 'Baic'
+	},
+	{
+		url: 'remont/kaiyi/',
+		name: 'Kaiyi'
+	},
+	{
+		url: 'remont/hyundai/',
+		name: 'Hyundai'
+	},
+	{
+		url: 'remont/kia/',
+		name: 'Kia'
+	},
+	{
+		url: 'remont/nissan/',
+		name: 'Nissan'
+	},
+	{
+		url: 'remont/renault/',
+		name: 'Renault'
+	},
+	{
+		url: 'remont/niva/',
+		name: 'Niva Chevrolet'
+	},
+	{
+		url: 'remont/opel/',
+		name: 'Opel'
+	},
+	{
+		url: 'remont/chevrolet/',
+		name: 'Chevrolet'
+	},
+	{
+		url: 'remont/cadillac/',
+		name: 'Cadillac'
+	},
+	{
+		url: 'remont/hummer/',
+		name: 'Hummer'
+	}
+];
