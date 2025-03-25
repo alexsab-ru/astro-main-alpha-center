@@ -234,59 +234,59 @@ export const FOOTER_INFO = '<sup>*</sup> Вся представленная н�
 export const REVIEWS_LIMIT = 6;
 export const autoBrands = [
 	{
-		url: 'remont/jetour/',
+		url: '/remont/jetour/',
 		name: 'Jetour'
 	},
 	{
-		url: 'remont/soueast/',
+		url: '/remont/soueast/',
 		name: 'Soueast'
 	},
 	{
-		url: 'remont/livan/',
+		url: '/remont/livan/',
 		name: 'Livan'
 	},
 	{
-		url: 'remont/baic/',
+		url: '/remont/baic/',
 		name: 'Baic'
 	},
 	{
-		url: 'remont/kaiyi/',
+		url: '/remont/kaiyi/',
 		name: 'Kaiyi'
 	},
 	{
-		url: 'remont/hyundai/',
+		url: '/remont/hyundai/',
 		name: 'Hyundai'
 	},
 	{
-		url: 'remont/kia/',
+		url: '/remont/kia/',
 		name: 'Kia'
 	},
 	{
-		url: 'remont/nissan/',
+		url: '/remont/nissan/',
 		name: 'Nissan'
 	},
 	{
-		url: 'remont/renault/',
+		url: '/remont/renault/',
 		name: 'Renault'
 	},
 	{
-		url: 'remont/niva/',
+		url: '/remont/niva/',
 		name: 'Niva Chevrolet'
 	},
 	{
-		url: 'remont/opel/',
+		url: '/remont/opel/',
 		name: 'Opel'
 	},
 	{
-		url: 'remont/chevrolet/',
+		url: '/remont/chevrolet/',
 		name: 'Chevrolet'
 	},
 	{
-		url: 'remont/cadillac/',
+		url: '/remont/cadillac/',
 		name: 'Cadillac'
 	},
 	{
-		url: 'remont/hummer/',
+		url: '/remont/hummer/',
 		name: 'Hummer'
 	}
 ];
