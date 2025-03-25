@@ -5,6 +5,8 @@ breadcrumb: 'Механический ремонт'
 h1: 'Механический ремонт'
 ---
 import RemontModels from '@/components/RemontModels/RemontModels.astro';
+import salonsData from '@/data/salons.json';
+export const workHours = salonsData[0].work_hours.toLowerCase();
 
 <p>
 	 Сервисный центр «АЛЬФА » является единственным в Самаре официально авторизованным центром по обслуживанию пяти марок General Motors: <RemontModels />.
@@ -57,7 +59,7 @@ import RemontModels from '@/components/RemontModels/RemontModels.astro';
 	Мы поможем решить вопросы, связанные с эксплуатацией Вашего автомобиля.
 </p>
 <p>
-	Наш сервис работает c 7:00 до 20:00. Вход со стороны ул. Горной или со стороны автосалона Nissan.
+	Наш сервис работает <Fragment set:html={workHours} />. Вход со стороны ул. Ново-Урицкой  или со стороны автосалона Jetour.
 </p>
 
 <RemontModels type="images" />
