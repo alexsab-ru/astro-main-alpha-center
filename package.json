@@ -43,6 +43,8 @@
     "test_XML_URL_VEHICLES_VEHICLE": "pnpm cars test vehicles_vehicle --dev",
     "test_USED_CARS_DATA_CARS_CAR": "pnpm cars test used_cars_data_cars_car --dev",
 
+    "get_table-jetour": "mkdir -p src/data/tables && export CSV_URL=\"https:\/\/docs.google.com\/spreadsheets\/d\/1ol5hP804Y7fnnfSHC_m-CPLRQd477jXLaOvPTWDs1gM\/edit?gid=0#gid=0\" && export QUERY_STRING=\"SELECT A, B\" &&  export KEY_COLUMN=\"\" && export OUTPUT_PATHS=\".\/src\/data\/tables\/jetour.json\" && export OUTPUT_FORMAT=\"\" && node .github\/scripts\/GSheetFetcher.js",
+
     "dev": "astro dev --open --host --config astro.local.config.mjs",
     "dd": "pnpm download_json && pnpm dev",
     "ddw": "powershell -Command \"pnpm download_json_win; pnpm dev\"",
