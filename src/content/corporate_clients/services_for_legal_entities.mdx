@@ -5,7 +5,9 @@ breadcrumb: 'Сервис для юридических лиц'
 h1: 'Сервис для юридических лиц'
 ---
 import { PHONE } from '@/const';
+import { LEGAL_INN } from '@/const';
 import { phoneFormat } from '@/js/utils/numbers.format';
+import RemontModels from '@/components/RemontModels/RemontModels.astro';
 
 <p>
 	 Автомобильный центр «Альфа» уделяет большое внимание работе с корпоративными клиентами. Мы осуществляем корпоративные продажи автомобилей, их гарантийное и постгарантийное обслуживание.
@@ -20,23 +22,66 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 	 Оплата за услуги по ремонту и техобслуживанию легковых автомобилей организаций и юридических лиц может приниматься по безналичному расчету. Для уточнения деталей рекомендуем связаться с менеджером по работе с корпоративными клиентами сервиса.
 </p>
 <p>
-	 Мы осуществляем техническое обслуживание, механический и кузовной ремонт автомобилей: Chevrolet, Opel, Cadillac, Hummer, Hyundai, Kia, Nissan, Chevrolet Niva и любых других марок.
+	 Мы осуществляем техническое обслуживание, механический и кузовной ремонт автомобилей: <RemontModels /> и любых других марок.
 </p>
-<h3>Наши реквизиты</h3>
+<h3 class="font-bold">Наши реквизиты</h3>
 <p>
-	 ООО «Альфа-Колор»<br />
+	 ООО  «Альфа-Сервис»<br />
 	 443082, г. Самара, ул. Ново-Урицкая, 22<br />
-	 ИНН 6311110416 КПП 631101001<br />
-	 ОГРН 1086311007331<br />
-	 ОКПО 88553215 ОКВЭД 50.20<br />
-	 Директор: Галактионов Дмитрий Иванович
+	 ИНН {LEGAL_INN} КПП 631101001<br />
+	 ОГРН 1056311026562<br />
+	 Директор: Воронько Леонид Евгеньевич
 </p>
+<div class="flex flex-col gap-5 my-12 sm:flex-row sm:flex-wrap sm:justify-center">
+	<div class="text-center border border-gray-200 rounded-lg px-3 py-5 sm:w-[45%] sm:p-5">
+		<p class="font-bold !mb-6">Договор на техническое обслуживание, ремонт и бесконтактную мойку автомобилей</p>
+		<div class="flex items-center justify-center gap-2 mb-4">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/word.svg" alt="Скачать документ в формате .doc" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/2025_03_21_dogovor_na_to.doc" download>Скачать документ в формате <strong>*.doc</strong></a>
+		</div>
+		<div class="flex items-center justify-center gap-2">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/pdf.svg" alt="Открыть документ в формате .pdf" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/2025_03_21_dogovor_na_to.pdf" target="_blank">Открыть документ в формате <strong>*.pdf</strong></a>
+		</div>
+	</div>
+
+	<div class="text-center border border-gray-200 rounded-lg px-3 py-5 sm:w-[45%] sm:p-5">
+		<p class="font-bold !mb-6">Договор на оказание услуг мойки</p>
+		<div class="flex items-center justify-center gap-2 mb-4">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/word.svg" alt="Скачать документ в формате .doc" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/2025_01_01_dogovor_na_mojku.doc" download>Скачать документ в формате <strong>*.doc</strong></a>
+		</div>
+		<div class="flex items-center justify-center gap-2">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/pdf.svg" alt="Открыть документ в формате .pdf" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/2025_01_01_dogovor_na_mojku.pdf" target="_blank">Открыть документ в формате <strong>*.pdf</strong></a>
+		</div>
+	</div>
+
+	<div class="text-center border border-gray-200 rounded-lg px-3 py-5 sm:w-[45%] sm:p-5">
+		<p class="font-bold !mb-6">Памятка для заключения договора</p>
+		<div class="flex items-center justify-center gap-2 mb-4">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/word.svg" alt="Скачать документ в формате .doc" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/pamyatka.doc" download>Скачать документ в формате <strong>*.doc</strong></a>
+		</div>
+		<div class="flex items-center justify-center gap-2">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/pdf.svg" alt="Открыть документ в формате .pdf" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/pamyatka.pdf" target="_blank">Открыть документ в формате <strong>*.pdf</strong></a>
+		</div>
+	</div>
+
+	<div class="text-center border border-gray-200 rounded-lg px-3 py-5 sm:w-[45%] sm:p-5">
+		<p class="font-bold !mb-6">Карточка партнера</p>
+		<div class="flex items-center justify-center gap-2 mb-4">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/word.svg" alt="Скачать документ в формате .doc" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/kartochka_partnera.doc" download>Скачать документ в формате <strong>*.doc</strong></a>
+		</div>
+		<div class="flex items-center justify-center gap-2">
+			<img class="w-[24px] h-[auto] !m-0 !inline" src="/img/icons/pdf.svg" alt="Открыть документ в формате .pdf" />
+			<a class="!no-underline !m-0" href="/files/corporate_clients/services_for_legal_entities/kartochka_partnera.pdf" target="_blank">Открыть документ в формате <strong>*.pdf</strong></a>
+		</div>
+	</div>
+	
+</div>
 <p>
-	 Договор на техническое обслуживание, ремонт и бесконтактную мойку автомобилей: <a href="/files/corporate_clients/services_for_legal_entities/2017_10_16%20Dogovor%20na%20TO%20R%20i%20moyku%20-%20predoplata.doc" target="_blank">СКАЧАТЬ</a>
-</p>
-<p>
-	 Памятка для заключения договора: <a href="/files/corporate_clients/services_for_legal_entities/2017_10_16%20Pamyatka%20dlya%20zaklyucheniya%20dogovora.doc" target="_blank">СКАЧАТЬ</a>
-</p>
-<p>
-	 В случае несогласия с текстом договора, протокол разногласий Вы можете отправить на электронную почту <a href="mailto:KambarovaIV@alpha-center.ru">KambarovaIV@alpha-center.ru</a>, или по телефону <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>, Камбарова Ирина Викторовна: Менеджер по корпоративным продажам.
+	 По вопросам заключения договора вы можете обратиться к Виноградовой Марине Юрьевне на электронную почту <a href="mailto:jurist@alpha-center.ru">jurist@alpha-center.ru</a> или по телефону <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
 </p>

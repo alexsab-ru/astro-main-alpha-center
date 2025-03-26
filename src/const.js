@@ -5,7 +5,7 @@ export const SITE_NAME = 'Автоцентр АЛЬФА';
 // Юр лицо
 export const LEGAL_ENTITY = '';
 // ИНН
-export const LEGAL_INN = '';
+export const LEGAL_INN = '6311077173';
 // Город
 export const LEGAL_CITY = 'г. Самара';
 // где? в Городе
