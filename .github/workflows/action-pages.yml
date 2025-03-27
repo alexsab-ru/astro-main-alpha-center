@@ -166,6 +166,7 @@ jobs:
         run: |
           npm install -g pnpm
           pnpm install --no-frozen-lockfile
+          pnpm run get_table-jetour
           pnpm build --outDir ./_site
 
       - name: Upload artifact
