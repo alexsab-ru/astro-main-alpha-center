@@ -5,6 +5,8 @@ breadcrumb: 'Ремонт Renault'
 h1: 'Автосервис по ремонту автомобилей Renault (Рено)'
 ---
 import RepairServices from '@/components/RepairServices/RepairServices.astro'
+import priceData from '@/data/tables/jetour.json';
+import Table from '@/components/Table/Table.astro';
 
 <p>
 	 Автосервис «Альфа» предоставляет услуги по ремонту и обслуживанию автомобилей Renault. Мы работаем с автомобилями разных моделей и годов выпуска. К работе допускаются только опытные и квалифицированные мастера, прошедшие обучение. В их распоряжении сертифицированное оборудование и профессиональный инструмент. Именно поэтому наш автосервис работает быстро и качественно.
@@ -17,8 +19,8 @@ import RepairServices from '@/components/RepairServices/RepairServices.astro'
 
 <h2 class="mt-12 lg:mt-20">Цены на ремонт и обслуживание автомобилей Renault</h2>
 
-{/* Table */}
+<Table data={priceData} />
 
-<RepairServices />
+<div class="mt-12 lg:mt-20"><RepairServices /></div>
 
 Наш автосервис предлагает надежный и качественный ремонт автомобилей Renault по доступным ценам. Запишитесь на сервис уже сегодня!

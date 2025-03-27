@@ -5,6 +5,8 @@ breadcrumb: 'Автосервис по ремонту автомобилей Hum
 h1: 'Автосервис по ремонту автомобилей Hummer (Хаммер)'
 ---
 import RepairServices from '@/components/RepairServices/RepairServices.astro'
+import priceData from '@/data/tables/jetour.json';
+import Table from '@/components/Table/Table.astro';
 
 <p>
 	 Автосервис «Альфа» предоставляет полный набор сервисных услуг для автовладельцев марки Hummer. Нужно пройти техническое обслуживание, предстоит незапланированный ремонт — приезжайте в наш автосервис. Мы поможем справиться с этой задачей без лишних временных и финансовых затрат.
@@ -139,8 +141,8 @@ import RepairServices from '@/components/RepairServices/RepairServices.astro'
 
 <h2 class="mt-12 lg:mt-20">Цены на ремонт и обслуживание автомобилей Hummer</h2>
 
-{/* Table */}
+<Table data={priceData} />
 
-<RepairServices />
+<div class="mt-12 lg:mt-20"><RepairServices /></div>
 
 Наш автосервис предлагает надежный и качественный ремонт автомобилей Hummer по доступным ценам. Запишитесь на сервис уже сегодня!
