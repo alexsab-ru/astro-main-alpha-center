@@ -45,6 +45,6 @@ export default defineConfig({
 			},
 		},
 	},
-	site: 'https://alpha-center.alexsab.ru',
+	site: 'https://alpha-center.ru',
 	base: "/"
 });
