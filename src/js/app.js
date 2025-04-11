@@ -10,7 +10,7 @@ import LazyLoader from './modules/LazyLoader';
 
 import { connectForms, cookiecook } from '@alexsab-ru/scripts';
 cookiecook();
-connectForms('https://alexsab.ru/lead/dev/', {
+connectForms('https://alexsab.ru/lead/alpha-center/', {
 	confirmModalText: 'Вы уже оставляли заявку сегодня, с Вами обязательно свяжутся в ближайшее время!',
 });
 
