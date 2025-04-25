@@ -104,28 +104,28 @@ export const LINKS_MENU = [
 			}
 		]
 	},
-	{
-		url: 'services/',
-		name: 'Услуги',
-		children: [
-			{
-				url: 'services/trade-in/',
-				name: 'TRADE-IN'
-			},
-			{
-				url: 'services/auto_loans/',
-				name: 'Автокредитование'
-			},
-			{
-				url: 'services/insurance/',
-				name: 'Страхование'
-			},
-			{
-				url: 'services/uuu/',
-				name: 'Удаленное урегулирование убытков'
-			}
-		]
-	},
+	// {
+	// 	url: 'services/',
+	// 	name: 'Услуги',
+	// 	children: [
+	// 		{
+	// 			url: 'services/trade-in/',
+	// 			name: 'TRADE-IN'
+	// 		},
+	// 		{
+	// 			url: 'services/auto_loans/',
+	// 			name: 'Автокредитование'
+	// 		},
+	// 		{
+	// 			url: 'services/insurance/',
+	// 			name: 'Страхование'
+	// 		},
+	// 		{
+	// 			url: 'services/uuu/',
+	// 			name: 'Удаленное урегулирование убытков'
+	// 		}
+	// 	]
+	// },
 	{
 		url: 'autoservice/',
 		name: 'Сервис и запчасти',
