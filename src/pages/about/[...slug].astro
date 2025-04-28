@@ -23,10 +23,10 @@ const post = Astro.props;
 const { Content } = await post.render();
 
 let breadcrumbs = [breadcrumb];
-if(post.data.type === 'news') {
+if(post.id.startsWith('news/')) {
 	breadcrumbs.push({name: 'Новости', href: '/about/news/'});
 }
-if(post.data.type === 'blog') {
+if(post.id.startsWith('blog/')) {
 	breadcrumbs.push({name: 'Блог', href: '/about/blog/'});
 }
 breadcrumbs.push({name: post.data.breadcrumb, href: Astro.url.pathname});
