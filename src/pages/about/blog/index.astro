@@ -3,16 +3,19 @@ import PageLayout from '@/layouts/PageLayout.astro';
 import { getCollection } from 'astro:content';
 import { SITE_NAME } from '@/const';
 import PostItem from '@/components/Post/Item.astro';
+import type { CollectionEntry } from 'astro:content';
 
-const rawPosts = await getCollection('about', ({data}) => {
-	return data.type === 'blog';
-});
-
-let posts;
-
-if (rawPosts && rawPosts.length) {
-	posts = rawPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+interface BlogPost extends CollectionEntry<'about'> {
+	data: {
+		type: string;
+		pubDate: Date;
+		title: string;
+	}
 }
+
+const rawPosts = await getCollection('about');
+const blogPosts = (rawPosts as BlogPost[]).filter(post => post.id.startsWith('blog/'));
+const posts = blogPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 import { breadcrumb as aboutBreadcrumb } from '../index.astro';
 ---
@@ -23,9 +26,9 @@ import { breadcrumb as aboutBreadcrumb } from '../index.astro';
 	breadcrumb={[aboutBreadcrumb, { name: "Блог", href: "/blog/" }]}
 >
 	{
-		posts ? (
+		posts.length ? (
 			<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
-				{ posts.map(post => ( <PostItem post={post} /> )) }
+				{ posts.map(post => <PostItem post={post} />) }
 			</div>
 		) : (
 			<p>Скоро здесь появятся новости {SITE_NAME}.</p>
