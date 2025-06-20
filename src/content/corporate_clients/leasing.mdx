@@ -5,7 +5,8 @@ breadcrumb: 'Лизинг'
 h1: 'Лизинг'
 ---
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>Приветствуем Вас на странице, посвященной лизингу автомобиля. Рады сообщить, что благодаря скидкам по специальной программе <nobr>«Корпоратив-Сотрудничество»</nobr>, действующим для лизинговых <nobr>компаний-партнеров</nobr>, Вы можете купить автомобиль в рассрочку без наценок, по той же цене, по которой автомобиль в данный момент продается в автосалоне.</p>
@@ -19,5 +20,5 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 	 Выбирая <a href="/corporate_clients/leasing/operative_leasing.php">оперативный лизинг</a> в автоцентре АЛЬФА, Вы получаете кроме финансирования транспортного средства с нулевым авансом целый комплекс услуг. <a href="/corporate_clients/leasing/operative_leasing.php">Смотреть подробнее.</a>
 </p>
 <p>
-	 Корпоративный отдел: <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+	 Корпоративный отдел: <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 </p>

@@ -7,10 +7,11 @@ pubDate: 2023-09-20
 image: '/img/actions/e51359/e51359.webp'
 ---
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p><img src="/img/actions/e51359/e51359.webp" width="700" height="301" alt="О запчастях под брендом ACDelco" title="О запчастях под брендом ACDelco" /></p>
 <p>Только до 5 декабря 2018 г. ООО "Альфа-Сервис" приобретайте оригинальные аксессуары по себестоимости*! Пусть каждая поездка на вашем автомобиле будет комфортной и дарит только положительные эмоции!</p>
-<p>Уточнить наличие запасных частей, аксессуаров и цены вы можете в отделе запасных частей ООО "Альфа-Сервис" по телефону: <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a></p>
+<p>Уточнить наличие запасных частей, аксессуаров и цены вы можете в отделе запасных частей ООО "Альфа-Сервис" по телефону: <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a></p>
 <p><a href="/files/actions/e51359/spare_parts_at_cost-GM-2018_11_23.xlsx" class="flat-button bg-read-more v3">СКАЧАТЬ КАТАЛОГ АКСЕССУАРОВ ПО АКЦИИ</a></p>

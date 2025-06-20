@@ -5,7 +5,8 @@ const description = 'Корпоративным клиентам';
 const title = 'Корпоративным клиентам - информация для корпоративных клиентов центра Альфа.';
 const h1 = 'Корпоративным клиентам - информация для корпоративных клиентов центра Альфа.';
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 import RemontModels from '@/components/RemontModels/RemontModels.astro';
 
@@ -53,6 +54,6 @@ export const breadcrumb = { name: "Корпоративным клиентам",
   Мы ждем Вас в нашем центре!
 </p>
 <p>
-  Корпоративный отдел: <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+  Корпоративный отдел: <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 </p>
 </PageLayout>

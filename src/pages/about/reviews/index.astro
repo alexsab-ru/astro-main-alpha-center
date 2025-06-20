@@ -1,6 +1,7 @@
 ---
 import PageLayout from '@/layouts/PageLayout.astro';
-import { SITE_NAME } from '@/const';
+import settings from '@/data/settings.json';
+export const { site_name } = settings;
 import Review from '@/components/Review/Review.astro';
 import reviewsData from '@/data/reviews.json';
 
@@ -11,7 +12,7 @@ let posts = reviewsData;
 
 <PageLayout 
 	h1="Отзывы"
-	title={`Отзывы | ${SITE_NAME}`}
+	title={`Отзывы | ${site_name}`}
 	breadcrumb={[aboutBreadcrumb, { name: "Отзывы", href: "/reviews/" }]}
 >
 	{

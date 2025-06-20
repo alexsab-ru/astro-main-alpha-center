@@ -6,7 +6,8 @@ h1: 'Контактная информация'
 ---
 import Map from '@/components/Map/Map.astro';
 import salonsData from '@/data/salons.json';
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common, map_background } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 export const salons = salonsData.filter(salon => !salon.type || salon.type.includes('contact_page'));
 export const workHours = salonsData[0].work_hours.toLowerCase();
@@ -22,11 +23,11 @@ export const workHours = salonsData[0].work_hours.toLowerCase();
 </p>
 <p><strong>Телефон:</strong></p>
 <p>
- <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a> - Сервис, Запасные части
+ <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a> - Сервис, Запасные части
 </p>
 <p>
 	 Если у вас возникли какие-либо вопросы по конкретной тематике, на них с удовольствием ответят специалисты нашего автоцентра:
 </p>
 <div class="h-[400px]">
-	<Map mapImg="/img/map-bg.webp" salons={salons} class="h-full" />
+	<Map mapImg={map_background} salons={salons} classes="h-full" />
 </div>

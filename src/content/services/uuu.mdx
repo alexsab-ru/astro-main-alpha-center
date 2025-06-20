@@ -4,7 +4,8 @@ title: 'Удаленное урегулирование убытков в Сам
 breadcrumb: 'Удаленное урегулирование убытков'
 h1: 'Удаленное урегулирование убытков'
 ---
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>
@@ -39,7 +40,7 @@ import { phoneFormat } from '@/js/utils/numbers.format';
    <strong>Для заявления по убыткам КАСКО и выявления всех повреждений автомобиль предоставлять в чистом виде.</strong>
 </p>
 <p>
-   <strong>Телефон Специалиста по УУУ <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>;</strong>
+   <strong>Телефон Специалиста по УУУ <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>;</strong>
 </p>
 <p>
    <strong>Время приема документов ежедневно с 8-00 до 20-00</strong>

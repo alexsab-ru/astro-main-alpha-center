@@ -4,7 +4,8 @@ title: 'TRADE-IN в Самаре - цены - сдать авто на обме�
 breadcrumb: 'TRADE-IN'
 h1: 'TRADE-IN'
 ---
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>
@@ -32,5 +33,5 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 </p>
 <p><a href="https://www.avito.ru/user/a57423fc7920e48db4fd8bee7866a19a/profile/all/avtomobili?src=sharing&sellerId=a57423fc7920e48db4fd8bee7866a19a" target="_blank">Магазин на авито</a></p>
 <p>
-  Подробнее об услуге можно узнать по телефону <strong><a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a></strong>.
+  Подробнее об услуге можно узнать по телефону <strong><a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a></strong>.
 </p>

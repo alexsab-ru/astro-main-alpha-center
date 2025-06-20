@@ -4,8 +4,8 @@ title: 'Сервис для юридических лиц'
 breadcrumb: 'Сервис для юридических лиц'
 h1: 'Сервис для юридических лиц'
 ---
-import { PHONE } from '@/const';
-import { LEGAL_INN } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common, legal_inn } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 import RemontModels from '@/components/RemontModels/RemontModels.astro';
 
@@ -28,7 +28,7 @@ import RemontModels from '@/components/RemontModels/RemontModels.astro';
 <p>
 	 ООО  «Альфа-Сервис»<br />
 	 443082, г. Самара, ул. Ново-Урицкая, 22<br />
-	 ИНН {LEGAL_INN} КПП 631101001<br />
+	 ИНН {legal_inn} КПП 631101001<br />
 	 ОГРН 1056311026562<br />
 	 Директор: Воронько Леонид Евгеньевич
 </p>
@@ -83,5 +83,5 @@ import RemontModels from '@/components/RemontModels/RemontModels.astro';
 	
 </div>
 <p>
-	 По вопросам заключения договора вы можете обратиться к Виноградовой Марине Юрьевне на электронную почту <a href="mailto:jurist@alpha-center.ru">jurist@alpha-center.ru</a> или по телефону <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+	 По вопросам заключения договора вы можете обратиться к Виноградовой Марине Юрьевне на электронную почту <a href="mailto:jurist@alpha-center.ru">jurist@alpha-center.ru</a> или по телефону <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 </p>

@@ -8,7 +8,8 @@ image: '/img/about/news/e48860/logo-list.webp'
 type: news
 ---
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>
@@ -28,7 +29,7 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 </p>
 <p>
 	 Вы можете связаться по всем вопросам с сервисными консультантами:<br />
-	 <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a> - с 7.00.до 20.00
+	 <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a> - с 7.00.до 20.00
 </p>
 <p>
 	 Так же Вы можете отправить сообщение с сайта и сервисные консультанты свяжутся с вами в ближайшее время.

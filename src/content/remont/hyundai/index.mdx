@@ -7,7 +7,8 @@ h1: 'Автосервис по ремонту автомобилей Hyundai (Х
 import RepairServices from '@/components/RepairServices/RepairServices.astro'
 import priceData from '@/data/tables/jetour.json'
 import Table from '@/components/Table/Table.astro'
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 import salonsData from '@/data/salons.json';
 
@@ -91,7 +92,7 @@ import salonsData from '@/data/salons.json';
 
 <Fragment set:html={`${salonsData[0].address}.`} />
 
-Телефон: <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+Телефон: <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 
 Часы работы: <Fragment set:html={`${salonsData[0].work_hours.toLowerCase()}.`} />
 

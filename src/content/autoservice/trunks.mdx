@@ -5,7 +5,8 @@ breadcrumb: 'Шиномонтаж'
 h1: 'Шиномонтаж'
 ---
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>
@@ -124,7 +125,7 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 </tbody>
 </table>
 <p>
-	 Подробнее вы можете узнать по телефону: <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+	 Подробнее вы можете узнать по телефону: <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 </p>
 <p>
  <sup>*</sup> В стоимость шиномонтажа уже заложены расходные материалы

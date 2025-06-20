@@ -4,7 +4,8 @@ title: 'ОСАГО, ДСАГО, КАСКО в Самаре - цены - цены
 breadcrumb: 'Страхование'
 h1: 'Страхование'
 ---
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>
@@ -108,7 +109,7 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 </li>
 </ul>
 <p>
-   Получить дополнительную информацию по автострахованию и рассчитать стоимость страхового взноса Вы можете по телефону:&nbsp;<a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+   Получить дополнительную информацию по автострахованию и рассчитать стоимость страхового взноса Вы можете по телефону:&nbsp;<a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 </p>
 <p>
    Наши сотрудники работают без перерыва и выходных с 8.00 до 20.00.

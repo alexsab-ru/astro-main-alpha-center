@@ -7,7 +7,8 @@ pubDate: 2023-09-20
 image: '/img/actions/e51198/e51198.webp'
 ---
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p><img src="/img/actions/e51198/e51198.webp" width="700" height="301" alt="Специальное пакетное предложение для Opel и Chevrolet" title="Специальное пакетное предложение для Opel и Chevrolet" /></p>
@@ -192,5 +193,5 @@ import { phoneFormat } from '@/js/utils/numbers.format';
   <a href="/files/actions/e51198/packages_servis_oil_chevrolet.xls" target="newtab"><img src="/img/brands/chevrolet.png" alt="Chevrolet" /></a>
   <a href="/files/actions/e51198/packages_servis_oil_opel.xls" target="newtab"><img src="/img/brands/opel.png" alt="Opel" /></a>
 </div>
-<p>Более подробная информация по телефону <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>.</p>
+<p>Более подробная информация по телефону <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>.</p>
 <p>* - только для постгарантийных автомобилей.</p>

@@ -5,7 +5,8 @@ breadcrumb: 'Наши партнеры'
 h1: 'Наши партнеры'
 ---
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>
@@ -46,5 +47,5 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 	 и многими другими, зарекомендовав себя как надежного партнера.
 </p>
 <p>
-	 Корпоративный отдел: <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+	 Корпоративный отдел: <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 </p>

@@ -1,7 +1,8 @@
 ---
 import PageLayout from '@/layouts/PageLayout.astro';
 import { getCollection } from 'astro:content';
-import { SITE_NAME } from '@/const';
+import settings from '@/data/settings.json';
+export const { site_name } = settings;
 import PostItem from '@/components/Post/Item.astro';
 import type { CollectionEntry } from 'astro:content';
 
@@ -22,7 +23,7 @@ import { breadcrumb as aboutBreadcrumb } from '../index.astro';
 
 <PageLayout 
 	h1="Блог"
-	title={`Блог | ${SITE_NAME}`}
+	title={`Блог | ${site_name}`}
 	breadcrumb={[aboutBreadcrumb, { name: "Блог", href: "/blog/" }]}
 >
 	{
@@ -31,7 +32,7 @@ import { breadcrumb as aboutBreadcrumb } from '../index.astro';
 				{ posts.map(post => <PostItem post={post} />) }
 			</div>
 		) : (
-			<p>Скоро здесь появятся новости {SITE_NAME}.</p>
+			<p>Скоро здесь появятся новости {site_name}.</p>
 		)
 	}
 </PageLayout>

@@ -5,7 +5,8 @@ breadcrumb: 'Корпоративная программа'
 h1: 'Корпоративная программа'
 ---
 
-import { PHONE } from '@/const';
+import settings from '@/data/settings.json';
+export const { phone_common } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 
 <p>
@@ -35,5 +36,5 @@ import { phoneFormat } from '@/js/utils/numbers.format';
 </ul>
 <p>*Для получения точной информации относительно размера корпоративной скидки, а также условий ее предоставления просим обращаться к начальнику отдела по работе с корпоративными клиентами.</p>
 <p>
-	 Корпоративный отдел: <a href={`tel:${phoneFormat(PHONE)}`}>{PHONE}</a>
+	 Корпоративный отдел: <a href={`tel:${phoneFormat(phone_common)}`}>{phone_common}</a>
 </p>
