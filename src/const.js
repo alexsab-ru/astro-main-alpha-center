@@ -27,6 +27,7 @@ export const LINKS_MENU = [
 	// 	children: models.map(model => ( { url: `models/${model.id}/`, name: `${model?.mark_id} ${model.name.toUpperCase()}` } ) )
 	// },
 	// {url: 'trade-in/', name: 'Оценка автомобиля'},
+	{url: 'vybrat-novyj-avto/', name: 'Выбрать новый автомобиль'},
 	{
 		url: 'remont/',
 		name: 'Сервисный центр',
