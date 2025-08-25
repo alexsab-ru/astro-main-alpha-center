@@ -71,6 +71,12 @@ export const LINKS_MENU = menu;
 export const COLLECTIONS = [
 	{name: 'special-offers', title: 'Спецпредложения', description: `Спецпредложения официального дилерского центра ${site_name} ${brand} ${legal_city}`},
 	{name: 'news', title: 'Новости', description: `Новости и акции дилерского центра ${site_name} ${brand} ${legal_city}`},
+	{name: 'services', title: 'Услуги'},
+	{name: 'remont', title: 'Сервисный центр'},
+	{name: 'autoservice', title: 'Сервис и запчасти'},
+	{name: 'about', title: 'О компании'},
+	{name: 'corporateClients', title: 'Корпоративным клиентам'},
+	{name: 'actions', title: 'Акции'}
 ];
 
 // Текст согласия в формах
