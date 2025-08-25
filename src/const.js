@@ -8,209 +8,69 @@ export const MARQUEE = { title: `Тотальная распродажа до ${
 // Ссылка яндекс-виджета
 export const LINK_WIDGET = 'https://yandex.ru/map-widget/v1/-/';
 
+import settings from '@/data/settings.json';
+const { site_name, brand, legal_city, phone_common } = settings;
+
+
 // Ссылки под хедером
 import { groupArrayByKey } from '@/js/utils/groupArrayByKey';
 import modelsData from '@/data/models.json';
 const { models } = modelsData;
 const groupModelsByBrand = groupArrayByKey(models.filter(model => model.show), 'mark_id');
-const children = Object.keys(groupModelsByBrand).reduce((acc, key) => {
-	acc[key] = groupModelsByBrand[key].map(model => ( { url: `models/${model.id}/`, name: `${model.name.toUpperCase()}`, thumb: model.thumb } ) );
+
+// Конфигурация для динамических меню
+const dynamicMenuConfig = {
+	models: {
+		baseUrl: '/models/',
+		dataSource: groupModelsByBrand,
+		transform: (model) => ({
+			url: `/models/${model.id}/`,
+			name: model.name.toUpperCase(),
+			thumb: model.thumb
+		})
+	}
+	// В будущем можно добавить другие типы:
+	// services: { baseUrl: '/services/', dataSource: servicesData, transform: ... }
+	// news: { baseUrl: '/news/', dataSource: newsData, transform: ... }
+};
+
+// Формируем childrenGroup на основе конфигурации
+const childrenGroup = Object.keys(dynamicMenuConfig).reduce((acc, type) => {
+	const config = dynamicMenuConfig[type];
+	acc[type] = Object.keys(config.dataSource).reduce((brandAcc, brandKey) => {
+		brandAcc[brandKey] = config.dataSource[brandKey].map(config.transform);
+		return brandAcc;
+	}, {});
 	return acc;
 }, {});
-export const LINKS_MENU = [
-	// {url: 'cars/', name: 'Авто в наличии'},
-	// {url: 'catalog/', name: 'Каталог'},
-	// {url: 'used_cars/', name: 'Авто с пробегом'},
-	// { 
-	// 	url: 'models/', 
-	// 	name: 'Модели',
-	// 	children: models.map(model => ( { url: `models/${model.id}/`, name: `${model?.mark_id} ${model.name.toUpperCase()}` } ) )
-	// },
-	// {url: 'trade-in/', name: 'Оценка автомобиля'},
-	{url: 'vybrat-novyj-avto/', name: 'Выбрать новый автомобиль'},
-	{
-		url: 'remont/',
-		name: 'Сервисный центр',
-		children: [
-			{
-				url: 'remont/jetour/',
-				name: 'Ремонт Jetour'
-			},
-			{
-				url: 'remont/soueast/',
-				name: 'Ремонт Soueast'
-			},
-			{
-				url: 'remont/livan/',
-				name: 'Ремонт Livan'
-			},
-			{
-				url: 'remont/baic/',
-				name: 'Ремонт Baic'
-			},
-			{
-				url: 'remont/kaiyi/',
-				name: 'Ремонт Kaiyi'
-			},
-			{
-				url: 'remont/hyundai/',
-				name: 'Ремонт Hyundai'
-			},
-			{
-				url: 'remont/kia/',
-				name: 'Ремонт Kia'
-			},
-			{
-				url: 'remont/nissan/',
-				name: 'Ремонт Nissan'
-			},
-			{
-				url: 'remont/renault/',
-				name: 'Ремонт Renault'
-			},
-			{
-				url: 'remont/niva/',
-				name: 'Ремонт Niva Chevrolet'
-			},
-			{
-				url: 'remont/opel/',
-				name: 'Ремонт Opel'
-			},
-			{
-				url: 'remont/chevrolet/',
-				name: 'Ремонт Chevrolet'
-			},
-			{
-				url: 'remont/cadillac/',
-				name: 'Ремонт Cadillac'
-			},
-			{
-				url: 'remont/hummer/',
-				name: 'Ремонт Hummer'
-			},
-			{
-				url: 'remont/to/',
-				name: 'Техническое обслуживание'
-			}
-		]
-	},
-	// {
-	// 	url: 'services/',
-	// 	name: 'Услуги',
-	// 	children: [
-	// 		{
-	// 			url: 'services/trade-in/',
-	// 			name: 'TRADE-IN'
-	// 		},
-	// 		{
-	// 			url: 'services/auto_loans/',
-	// 			name: 'Автокредитование'
-	// 		},
-	// 		{
-	// 			url: 'services/insurance/',
-	// 			name: 'Страхование'
-	// 		},
-	// 		{
-	// 			url: 'services/uuu/',
-	// 			name: 'Удаленное урегулирование убытков'
-	// 		}
-	// 	]
-	// },
-	{
-		url: 'autoservice/',
-		name: 'Сервис и запчасти',
-		children: [
-			{
-				url: 'autoservice/individuals/postwarranty_service/',
-				name: 'Постгарантийный сервис'
-			},
-			{
-				url: 'autoservice/individuals/mechanical_repairs/',
-				name: 'Механический ремонт'
-			},
-			{
-				url: 'autoservice/individuals/body_repair/',
-				name: 'Кузовной ремонт'
-			},
-			{
-				url: 'autoservice/spare_parts/',
-				name: 'Запчасти'
-			},
-			{
-				url: 'autoservice/washing/',
-				name: 'Мойка'
-			},
-			{
-				url: 'autoservice/trunks/',
-				name: 'Шиномонтаж'
-			},
-			{
-				url: 'autoservice/acdelco/',
-				name: 'Запасные части ACDelco'
-			}
-		]
-	},
-	{url: 'actions/', name: 'Акции'},
-	{
-		url: 'about/',
-		name: 'О компании',
-		children: [
-			{
-				url: 'about/contacts/',
-				name: 'Контактная информация'
-			},
-			{
-				url: 'about/our_history/',
-				name: 'Наша история'
-			},
-			{
-				url: 'about/benefits/',
-				name: 'Преимущества'
-			},
-			{
-				url: 'about/vacancies/',
-				name: 'Вакансии'
-			},
-			{
-				url: 'about/news/',
-				name: 'Новости'
-			},
-			{
-				url: 'about/blog/',
-				name: 'Блог'
-			},
-		]
-	},
-	{
-		url: 'corporate_clients/',
-		name: 'Корпоративным клиентам',
-		children: [
-			{
-				url: 'corporate_clients/services_for_legal_entities/',
-				name: 'Сервис для юридических лиц'
-			},
-			{
-				url: 'corporate_clients/our_partners/',
-				name: 'Наши партнеры'
-			},
-			{
-				url: 'corporate_clients/certificates/',
-				name: 'Сертификаты и свидетельства'
-			},
-		]
-	},
-];
+
+let menu = [];
+
+try {
+	menu = await import('@/data/menu.json');	
+	menu = menu.default || menu; // Обработка случая, когда импорт возвращает объект с ключом default
+} catch (e) {
+	console.warn('menu.json not found, using default empty menu');
+	menu = []; // или какой-то fallback
+}
+
+// Обрабатываем динамические children только для известных типов
+menu.length > 0 && menu.map(item => {
+	if(typeof item?.children === 'string'){
+		const key = item.children;		
+		// Проверяем, что это именно известный тип из конфигурации
+		if (childrenGroup[key] && dynamicMenuConfig[key]) {			
+			item.children = childrenGroup[key];
+		}
+	}
+});
+
+export const LINKS_MENU = menu;
 
 // Коллекции
 export const COLLECTIONS = [
-	{name: 'special-offers', title: 'Спецпредложения'},
-	{name: 'news', title: 'Новости'},
-	{name: 'services', title: 'Услуги'},
-	{name: 'remont', title: 'Сервисный центр'},
-	{name: 'autoservice', title: 'Сервис и запчасти'},
-	{name: 'about', title: 'О компании'},
-	{name: 'corporateClients', title: 'Корпоративным клиентам'},
-	{name: 'actions', title: 'Акции'}
+	{name: 'special-offers', title: 'Спецпредложения', description: `Спецпредложения официального дилерского центра ${site_name} ${brand} ${legal_city}`},
+	{name: 'news', title: 'Новости', description: `Новости и акции дилерского центра ${site_name} ${brand} ${legal_city}`},
 ];
 
 // Текст согласия в формах
@@ -218,10 +78,8 @@ export const AGREE_LABEL = '<span>Даю согласие на обработк�
 
 // Текст информации в футере
 import salonsData from '@/data/salons.json';
-import settings from '@/data/settings.json';
-const { phone_common } = settings;
 const salons = salonsData.filter(salon => !salon?.type || salon?.type.includes('footer_info'));
 const phones = phone_common ? [`<a class="whitespace-nowrap" href="tel:${phoneFormat(phone_common)}">${phone_common}</a>`] : salons.map((salon) => { return `<span>${salon.name}</span> <a class="whitespace-nowrap" href="tel:${phoneFormat(salon.phone)}">${salon.phone}</a>` });
 
 export const FOOTER_INFO = '<sup>*</sup> Вся представленная на сайте информация, касающаяся автомобилей и сервисного обслуживания, носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 ГК РФ. Все цены, указанные на данном сайте, носят информационный характер. Для получения подробной информации просьба обращаться к менеджерам отдела продаж по номеру телефона '+phones.join(', ')+'. Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления.';
-export const REVIEWS_LIMIT = 6;
+export const REVIEWS_LIMIT = Infinity;
