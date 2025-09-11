@@ -70,7 +70,7 @@ export const LINKS_MENU = menu;
 // Коллекции
 export const COLLECTIONS = [
 	{name: 'special-offers', title: 'Спецпредложения', description: `Спецпредложения официального дилерского центра ${site_name} ${brand} ${legal_city}`},
-	{name: 'news', title: 'Новости', description: `Новости и акции дилерского центра ${site_name} ${brand} ${legal_city}`},
+	// {name: 'news', title: 'Новости', description: `Новости и акции дилерского центра ${site_name} ${brand} ${legal_city}`},
 	{name: 'services', title: 'Услуги'},
 	{name: 'remont', title: 'Сервисный центр'},
 	{name: 'autoservice', title: 'Сервис и запчасти'},
