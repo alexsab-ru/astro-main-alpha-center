@@ -75,7 +75,7 @@ export const COLLECTIONS = [
 	{name: 'remont', title: 'Сервисный центр'},
 	{name: 'autoservice', title: 'Сервис и запчасти'},
 	{name: 'about', title: 'О компании'},
-	{name: 'corporateClients', title: 'Корпоративным клиентам'},
+	{name: 'corporate_clients', title: 'Корпоративным клиентам'},
 	{name: 'actions', title: 'Акции'}
 ];
 
