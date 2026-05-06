@@ -5,8 +5,8 @@ breadcrumb: 'Контактная информация'
 h1: 'Контактная информация'
 ---
 import Map from '@/components/Map/Map.astro';
-import salonsData from '@/data/salons.json';
-import settings from '@/data/settings.json';
+import salonsData from '@/data/site/salons.json';
+import settings from '@/data/site/settings.json';
 export const { phone_common, map_background } = settings;
 import { phoneFormat } from '@/js/utils/numbers.format';
 export const salons = salonsData.filter(salon => !salon.type || salon.type.includes('contact_page'));
