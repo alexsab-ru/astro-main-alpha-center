@@ -3,7 +3,7 @@ import PageLayout from '@/layouts/PageLayout.astro';
 import { getCollection } from 'astro:content';
 import settings from '@/data/site/settings.json';
 export const { site_name } = settings;
-import PostItem from '@/components/Post/Item.astro';
+import PostItem from '@/blocks/post/PostItem.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface BlogPost extends CollectionEntry<'about'> {
